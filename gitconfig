@@ -1,0 +1,15 @@
+[user]
+	name = Lucas Maystre
+  email = lucas@maystre.ch
+
+[alias]
+  ci = commit
+  co = checkout
+  st = status
+  br = branch
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
