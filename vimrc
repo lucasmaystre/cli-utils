@@ -68,8 +68,3 @@ set noerrorbells              " no bells in terminal
 "other things (from
 "http://b4winckler.wordpress.com/2009/07/10/a-minimal-vim-configuration/)
 set backspace=indent,eol,start
-
-" GUI stuff
-set guifont=Consolas:h16
-set guioptions=-t
-set guioptions=+e
