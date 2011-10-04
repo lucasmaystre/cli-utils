@@ -4,6 +4,7 @@ alias lla='ls -oGFa'
 alias l=less
 alias chi="ssh -l root chi.lum.li"
 PATH=$PATH":/usr/local/git/bin"
+PATH=$PATH":"$HOME"/bin"
 export CLICOLOR=1
 
 # mysql is not installed anymore
