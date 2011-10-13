@@ -3,6 +3,7 @@ alias ll='ls -oGF'
 alias lla='ls -oGFa'
 alias l=less
 alias chi="ssh -l root chi.lum.li"
+alias ku="ssh -l root ku.lum.li"
 PATH=$PATH":/usr/local/git/bin"
 PATH=$PATH":"$HOME"/bin"
 export CLICOLOR=1
