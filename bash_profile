@@ -5,6 +5,8 @@ alias l=less
 alias propassgen='/Users/lum/Documents/propassgen/propassgen/utils/propassgen.py --source=/Users/lum/Documents/propassgen/propassgen/utils/source.xml'
 alias chi="ssh -l root chi.lum.li"
 alias ku="ssh -l root ku.lum.li"
+# Spotlight command line tool. Useful for searching in PDFs.
+alias search="mdfind -onlyin ./"
 PATH=$PATH":/usr/local/git/bin"
 PATH=$PATH":"$HOME"/bin"
 export CLICOLOR=1
