@@ -3,6 +3,7 @@ alias ll='ls -oGF'
 alias lla='ls -oGFa'
 alias l=less
 alias propassgen='/Users/lum/Documents/propassgen/propassgen/utils/propassgen.py --source=/Users/lum/Documents/propassgen/propassgen/utils/source.xml'
+alias graphviz="open /usr/local/Cellar/graphviz/2.28.0/Graphviz.app"
 alias chi="ssh -l root chi.lum.li"
 alias ku="ssh -l root ku.lum.li"
 # Spotlight command line tool. Useful for searching in PDFs.
