@@ -1,0 +1,8 @@
+# Comments can be embedded like this.
+Host chi
+
+HostName chi.lum.li
+User root
+ServerAliveInterval 30
+ServerAliveCountMax 120
+IdentityFile /path/to/key

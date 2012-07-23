@@ -1,0 +1,17 @@
+ROOT=$HOME/Documents/dotfiles/bash
+source $ROOT/general.bash
+source $ROOT/osx.bash
+
+PATH=$PATH":/usr/local/git/bin"
+
+# Other aliases.
+alias propassgen='/Users/lum/Documents/propassgen/propassgen/utils/propassgen.py --source=/Users/lum/Documents/propassgen/propassgen/utils/source.xml'
+alias graphviz="open /usr/local/Cellar/graphviz/2.28.0/Graphviz.app"
+alias chi="ssh -l root chi.lum.li"
+alias ku="ssh -l root ku.lum.li"
+
+# Git autocompletion
+source $HOME/Documents/programmes/git-completion.bash
+
+# Use the home brewed psql
+alias psql='/usr/local/Cellar/postgresql/9.1.2/bin/psql'
