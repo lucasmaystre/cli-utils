@@ -2,4 +2,10 @@
 set guifont=Consolas:h16
 set guioptions=-t
 set guioptions=+e
-set lines=50 columns=180
+set lines=50 columns=150
+
+set bg=light
+colorscheme solarized
+" Has to be *after colorscheme*.
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
