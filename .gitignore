@@ -1,4 +1,4 @@
-bash_profile
-vimrc
-gvimrc
-ssh_config
+/bash_profile
+/vimrc
+/gvimrc
+/ssh_config
