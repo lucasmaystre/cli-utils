@@ -68,3 +68,5 @@ set noerrorbells              " no bells in terminal
 "other things (from
 "http://b4winckler.wordpress.com/2009/07/10/a-minimal-vim-configuration/)
 set backspace=indent,eol,start
+
+autocmd Filetype make setlocal noexpandtab tabstop=4
