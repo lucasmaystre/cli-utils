@@ -16,4 +16,4 @@ HISTFILESIZE=100000
 
 # Some more environment defaults.
 PATH=$PATH":"$HOME"/bin"
-EDITOR=vim
+export EDITOR=vim
