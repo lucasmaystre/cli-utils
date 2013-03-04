@@ -3,8 +3,8 @@
 # Author: Lucas Maystre <lucas@maystre.ch>
 
 # Some aliases.
-alias ll='ls -oGF'
-alias lla='ls -oGFa'
+alias ll='ls -ohGF'
+alias lla='ls -ohGFa'
 alias l=less
 
 # Change the prompt.

@@ -11,3 +11,5 @@ export LC_ALL=en_US.UTF-8
 
 # Spotlight command line tool. Useful for searching in PDFs.
 alias search="mdfind -onlyin ./"
+# QuickLook debug tool.
+alias ql="qlmanage -p"
