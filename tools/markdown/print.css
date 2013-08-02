@@ -1,0 +1,52 @@
+@page {
+  margin: 2cm 2.5cm;
+  @bottom-center {
+    content: counter(page);
+    font-size: small;
+  }
+}
+
+h1 {
+  font-size: 24pt;
+  border-bottom: 2pt solid;
+  margin-bottom: 15pt;
+  -weasy-bookmark-level: none;
+}
+
+h2 {
+  border-bottom: 1pt solid;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+
+html {
+  font-family: "Source Sans Pro";
+  font-size: 12pt;
+  line-height: 1.35;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+  -weasy-hyphens: auto
+}
+
+a {
+  -weasy-hyphens: manual;
+}
+
+code, pre {
+  font-family: "Consolas";
+  color: #444;
+  -weasy-hyphens: manual;
+}
+
+pre {
+  margin: 0.2cm 0 0.2cm 0.5cm;
+  font-size: 11pt;
+}
+
+ul {
+  list-style-type:square
+}
