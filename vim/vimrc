@@ -23,6 +23,8 @@ set hidden
 "set fo=tcqrb " does not work
 set wrap
 set wildmode=list:longest " autocompletion is bash like
+set nojoinspaces  " Disable double space after punctuation. See Matthew
+                  " Butterick's Practical Typography
 
 " Indentation and tabs.
 set autoindent
