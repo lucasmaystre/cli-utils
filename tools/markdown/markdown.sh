@@ -15,7 +15,7 @@ fi
 # `--smart` transforms `---` into &mdash; and other niceties.
 # `--standalone` embeds into standalone HTML doc (<html> root).
 # The `sed` line adds a lang attribute to <html> (needed for hyphenation).
-$PANDOC --from markdown --to html5 --smart --standalone $input \
+$PANDOC --from markdown --to html5 --smart --standalone --webtex $input \
   | sed -e 's/^<html>$/<html lang="en">/' \
   | $WEASYPRINT -e utf8 - $output -s $STYLESHEET
 
