@@ -1,2 +1,2 @@
 " Source another file.
-so /Users/lum/Documents/cli-utils/vim/vimrc
+so $HOME/cli-utils/vim/vimrc

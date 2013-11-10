@@ -18,6 +18,7 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
 set number
+set cursorline " Highlight current line.
 set tw=80
 set hidden
 "set fo=tcqrb " does not work
@@ -32,8 +33,8 @@ set autoindent
 " whitespace of the tab.
 set expandtab
 " we explicitly don't use 'smarttab' and 'softtabstop'
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 
 "inoremap jj <Esc>
 set hlsearch

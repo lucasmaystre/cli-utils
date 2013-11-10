@@ -7,3 +7,6 @@ export TOOLS_ROOT=$ROOT/tools
 
 # Add a folder in $HOME for commands.
 PATH=$HOME/bin:$PATH
+
+# LaTeX compilation with https://code.google.com/p/latex-makefile/.
+#alias ltx='make -f ~/Documents/latex-others/Makefile'
