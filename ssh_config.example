@@ -1,8 +1,15 @@
-# Comments can be embedded like this.
-Host chi
-
-HostName chi.lum.li
-User root
+# For all hosts.
 ServerAliveInterval 30
 ServerAliveCountMax 120
-IdentityFile /path/to/key
+
+
+# Personal servers
+Host alpha
+  HostName alpha.example.com
+  User root
+
+Host beta
+  HostName beta.example.com
+
+Host alpha beta
+  IdentityFile /path/to/private_key
