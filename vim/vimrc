@@ -11,15 +11,16 @@ set nocompatible
 " vim7.2 intentionally makes * lamer for php.  wtf
 autocmd FileType php setlocal iskeyword+=$
 
+filetype on
 syntax on
 colorscheme ir_black
 " does not seem to work? EDIT: has to be *after colorscheme*
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+match OverLength /\%80v.\+/
 
 set number
 set cursorline " Highlight current line.
-set tw=80
+set tw=79
 set hidden
 "set fo=tcqrb " does not work
 set wrap
@@ -75,3 +76,7 @@ set backspace=indent,eol,start
 autocmd Filetype make setlocal noexpandtab tabstop=4
 " Tab Separated Values kind of do not like tabs to be expanded.
 autocmd BufRead,BufNewFile,BufEnter *.tsv set noexpandtab tabstop=4
+
+" Simple way to handle folds (works well with Python at least.)
+set foldmethod=indent
+set foldlevel=99
