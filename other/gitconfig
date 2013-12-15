@@ -13,3 +13,15 @@
   status = auto
   branch = auto
   interactive = auto
+
+[push]
+  # Cf. http://stackoverflow.com/questions/13148066.
+  default = simple
+
+[branch]
+  # On `git-pull`, does a rebase instead of a merge.
+  # Cf. http://stevenharman.net/git-pull-with-automatic-rebase.
+  autosetuprebase = always
+
+[core]
+  excludesfile = ~/.gitignore
