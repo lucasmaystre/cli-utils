@@ -6,7 +6,7 @@ find practical to have at hand when working on a new machine.
 
 Some quick links:
 
-- <http://blog.toddwerth.com/entry_files/8/ir_black.vim>
+- <https://raw.githubusercontent.com/twerth/ir_black/master/colors/ir_black.vim>
 - <http://ethanschoonover.com/solarized>
 
 How to install bash auto-completion for Git: download
