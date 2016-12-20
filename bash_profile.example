@@ -1,6 +1,6 @@
-ROOT=$HOME/Documents/cli-utils
+ROOT=$HOME/cli-utils
 source $ROOT/bash/general.bash
-source $ROOT/bash/osx.bash
+source $ROOT/bash/linux.bash
 
 # Needed for the bundled tools.
 export TOOLS_ROOT=$ROOT/tools
