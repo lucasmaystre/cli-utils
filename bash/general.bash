@@ -17,3 +17,4 @@ HISTFILESIZE=100000
 # Some more environment defaults.
 PATH=$PATH":"$HOME"/bin"
 export EDITOR=vim
+export LANG=en_US.UTF-8
