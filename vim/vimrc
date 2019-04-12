@@ -4,17 +4,13 @@
 "nnoremap <Esc><Esc> :noh<return><Esc>
 
 set nocompatible
-" Facebook specific
-"source $ADMIN_SCRIPTS/master.vimrc
-"source /home/engshare/admin/scripts/vim/biggrep.vim
-"set tags=TAGS;/
 " vim7.2 intentionally makes * lamer for php.  wtf
 autocmd FileType php setlocal iskeyword+=$
 
 filetype on
 syntax on
 colorscheme ir_black
-" does not seem to work? EDIT: has to be *after colorscheme*
+" This line has to be *after* `colorscheme`.
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%80v.\+/
 
@@ -73,10 +69,28 @@ set noerrorbells              " no bells in terminal
 "http://b4winckler.wordpress.com/2009/07/10/a-minimal-vim-configuration/)
 set backspace=indent,eol,start
 
+" Make, TSV and Go files kind of do not like tabs to be expanded.
 autocmd Filetype make setlocal noexpandtab tabstop=4
-" Tab Separated Values kind of do not like tabs to be expanded.
 autocmd BufRead,BufNewFile,BufEnter *.tsv set noexpandtab tabstop=4
+autocmd BufRead,BufNewFile,BufEnter *.go set noexpandtab tabstop=4
+
+" When editing TeX abd HTML files, don't apply the usual textwidth rules.
+" http://stackoverflow.com/questions/1413285
+" http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
+autocmd BufNewFile,BufRead,BufEnter *.tex call SetNoWrapOptions()
+autocmd Filetype html call SetNoWrapOptions()
+function SetNoWrapOptions()
+    highlight clear OverLength
+    setlocal textwidth=0 wrapmargin=0
+    setlocal linebreak
+endfunction
 
 " Simple way to handle folds (works well with Python at least.)
 set foldmethod=indent
 set foldlevel=99
+
+" Moving by screen line instead of file line.
+noremap <Up> gk
+noremap! <Up> <C-O>gk
+noremap <Down> gj
+noremap! <Down> <C-O>gj
