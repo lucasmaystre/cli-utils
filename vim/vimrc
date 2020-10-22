@@ -94,3 +94,16 @@ noremap <Up> gk
 noremap! <Up> <C-O>gk
 noremap <Down> gj
 noremap! <Down> <C-O>gj
+
+" Fixes `gx` issues on Mac, c.f. <https://github.com/vim/vim/issues/4738>.
+if has('macunix')
+  function! OpenURLUnderCursor()
+    let s:uri = matchstr(getline('.'), '[a-z]*:\/\/[^ >,;()]*')
+    let s:uri = shellescape(s:uri, 1)
+    if s:uri != ''
+      silent exec "!open '".s:uri."'"
+      :redraw!
+    endif
+  endfunction
+  nnoremap gx :call OpenURLUnderCursor()<CR>
+endif
