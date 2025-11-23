@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Copyright (C) 2011 Lucas Maystre <lucas@maystre.ch>
 #
 # This file is part of propassgen.
@@ -52,16 +52,16 @@ def _init_trigram_table(symbols):
 def parse_source(source_file):
     tree = ElementTree.parse(source_file)
     # Parse symbols
-    symbols = ''
-    symbs_elem = tree.find('symbols')
-    for symb_elem in symbs_elem.iter('symbol'):
-        symbols += symb_elem.get('value')
+    symbols = ""
+    symbs_elem = tree.find("symbols")
+    for symb_elem in symbs_elem.iter("symbol"):
+        symbols += symb_elem.get("value")
     # Parse frequencies
     frequencies = _init_trigram_table(symbols)
-    seqs_elem = tree.find('sequences')
-    for seq_elem in seqs_elem.iter('sequence'):
-        trig = seq_elem.get('value')
-        freq = int(seq_elem.get('frequency'))
+    seqs_elem = tree.find("sequences")
+    for seq_elem in seqs_elem.iter("sequence"):
+        trig = seq_elem.get("value")
+        freq = int(seq_elem.get("frequency"))
         frequencies[trig[0]][trig[1]][trig[2]] = freq
     return symbols, frequencies
 
@@ -78,7 +78,7 @@ def memo(func):
 
 @memo
 def pmf(*args):
-    assert len(args) in [1, 2, 3]
+    assert len(args) in {1, 2, 3}
     if len(args) < 3:
         return sum([pmf(*args+(x,)) for x in SYMBOLS])
     else:  # len(args) == 3
@@ -107,8 +107,8 @@ def entropy_rate(frequencies):
                 cond(x, y, z) * log2(cond(x, y, z))
                 for z in SYMBOLS]) for y in SYMBOLS]) for x in SYMBOLS])
     except:
-        print x, ' ', y, ' ', z
-        print cond(x,y,z)
+        print("{} {} {}".format(x, y, z))
+        print(cond(x, y, z))
         raise
 
 
@@ -171,5 +171,5 @@ if __name__ == '__main__':
     TOTAL = sum([sum([sum(y.values()) for y in x.values()])
             for x in FREQ_TABLE.values()])
     for i in range(options.quantity):
-        print gen_passwd(options.length)
-    print options.length*entropy_rate(FREQ_TABLE), 'bits of entropy'
+        print(gen_passwd(options.length))
+    print("{:.2f} bits of entropy".format(options.length*entropy_rate(FREQ_TABLE)))
