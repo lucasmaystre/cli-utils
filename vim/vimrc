@@ -12,11 +12,11 @@ syntax on
 colorscheme ir_black
 " This line has to be *after* `colorscheme`.
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%80v.\+/
+match OverLength /\%89v.\+/
 
 set number
 set cursorline " Highlight current line.
-set tw=79
+set tw=88
 set hidden
 "set fo=tcqrb " does not work
 set wrap
