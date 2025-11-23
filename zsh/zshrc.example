@@ -1,0 +1,6 @@
+ROOT=$HOME/Documents/cli-utils
+source $ROOT/zsh/general.zsh
+source $ROOT/zsh/osx.zsh
+
+# Needed for the bundled tools.
+export TOOLS_ROOT=$ROOT/tools
